@@ -1,0 +1,46 @@
+
+
+.modal-about__title{
+    margin-bottom: 20px;       
+    justify-content: center;
+    color: $second-text-color;
+    @include tablet {
+        margin-bottom: 32px;
+  }
+}
+.iframe-wrap{
+    position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 
+                            (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 32px;
+  }
+}
+
+
+.iframe-youtube-lazy-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+   
+}
+
+
+.modal-about__descr {  
+font-size: 14px;
+line-height: calc(20 / 14);
+color: $second-text-color;
+text-align: initial;
+@include tablet {
+    font-size: 16px;
+    line-height: calc(22 / 16);
+}
+
+}

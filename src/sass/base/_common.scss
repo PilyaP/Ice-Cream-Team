@@ -1,0 +1,116 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  line-height: 1.76;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url(../images/backgroud-mob-1x.jpg);
+  cursor: url(../images/cursor.png), auto;
+
+  @include retina {
+    background-image: url(../images/backgroud-mob-2x.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../images/backgroud-tab-1x.jpg);
+    @include retina {
+      background-image: url(../images/backgroud-tab-2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/backgroud-desk-1x.jpg);
+    @include retina {
+      background-image: url(../images/backgroud-desk-2x.jpg);
+    }
+  }
+}
+
+* {
+  &:focus {
+    // outline: none;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+.no-scroll-modal::-webkit-scrollbar {
+  // scrollbar-width: none;
+}
+.no-scroll-modal {
+}
+
+.how-made-link {
+  // color: #f8d24e;
+  // text-decoration: underline;
+
+  transition: color $transit;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:focus {
+    color: #fcfcfc;
+    outline: none;
+  }
+}
+
+@keyframes headerIceCreamTablet {
+  0% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    // background-color: orange;
+  }
+
+  100% {
+    transform: translateY();
+  }
+}
+
+@keyframes dishHero {
+  0% {
+    transform: rotate(0);
+    // transform: scale(0);
+  }
+
+  50% {
+  }
+
+  100% {
+    transform: rotate(360deg);
+    // transform: scale(100%);
+  }
+}
+
+@keyframes titleHero {
+  0% {
+    transform: translateX(100%);
+  }
+
+  50% {
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes modalA {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
